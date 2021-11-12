@@ -6,8 +6,10 @@ const routes = require('./routes.js')
 server.set('view engine', 'ejs');
 
 //habilitar arquivos estáticos
-server.use(express.static('public'))        
+server.use(express.static('public'))    
 
+//usando req.body 
+server.use(express.urlencoded({ extended: true }))
 //rotas
 server.use(routes)
 
