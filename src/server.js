@@ -10,6 +10,7 @@ server.use(express.static('public'))
 
 //usando req.body 
 server.use(express.urlencoded({ extended: true }))
+
 //rotas
 server.use(routes)
 
