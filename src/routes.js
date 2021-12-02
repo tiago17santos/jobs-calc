@@ -4,14 +4,6 @@ const ProfileController = require('./controllers/ProfileController')
 const JobController  = require('./controllers/JobController')
 
 
-
-const Job = {
-    
-
-    
-}
-
-
 routes.get('/', JobController.index)
 routes.get('/job', JobController.create)
 routes.post('/job', JobController.save)
