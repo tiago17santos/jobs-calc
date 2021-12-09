@@ -16,7 +16,7 @@ module.exports = {
         const daysInMs = 1000 * 60 * 60 * 24
     
         //diferença de dias que restam para vencimento
-        const dayDiff = Math.floor(timeDiffInMs / daysInMs)
+        const dayDiff = Math.ceil(timeDiffInMs / daysInMs)
     
         return dayDiff
     
