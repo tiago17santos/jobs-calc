@@ -2,7 +2,13 @@ const Database = require("./config");
 
 const initDb = {
     async init() {
-        const db = await Database();
+        
+        //async = torna a função assíncrona (por conta do await) 
+        //quando necessita esperar por algum dado/info ou processo
+        
+        //await = esperar finalizar o processo para seguir a execução..
+
+        const db = await Database(); // iniciando conexão com bd
 
         await db.exec(`CREATE TABLE profile (
             id INTEGER PRIMARY KEY,
@@ -23,6 +29,7 @@ const initDb = {
             created_at DATETIME);`
         );
 
+        //iniciando db com dados nas tabelas
         await db.run(`INSERT INTO profile (
             name, 
             avatar, 
@@ -65,7 +72,7 @@ const initDb = {
             1639001599349);`
         );
 
-        await db.close();
+        await db.close(); // fechando a conexão com bd
   },
 };
 

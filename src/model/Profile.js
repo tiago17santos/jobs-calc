@@ -10,6 +10,8 @@ module.exports = {
 
         await db.close()
 
+        //retornando dados normalizados ao invés de alterar os arq ejs (por conta dos - (ejs) e _ (utilizado no mysql))
+        
         return {
           name: data.name,
           avatar: data.avatar,
